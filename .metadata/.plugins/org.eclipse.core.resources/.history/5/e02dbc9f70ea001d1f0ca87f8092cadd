@@ -1,0 +1,38 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		System.out.println("HolaMundo");
+		
+		int numero = 20;
+		System.out.println(numero);
+		float ao = 23f;
+		System.out.println(ao);
+		boolean verdadero = true;
+		System.out.println(verdadero);
+		
+		String nom = "Dani";
+		System.out.println(nom);
+		
+		@SuppressWarnings("removal")
+		Integer num = new Integer(2);
+		System.out.println(num);
+		
+		ao = numero;
+		
+		String enLetras = Integer.toString(numero);
+		System.out.println("El número es " + enLetras);
+		
+		enLetras="22";
+		numero = Integer.parseInt(enLetras);
+		System.out.println(enLetras);
+		
+		try {
+			enLetras = "22Los";
+			numero = Integer.parseInt(enLetras);
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+
+}
