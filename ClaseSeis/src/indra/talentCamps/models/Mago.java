@@ -17,8 +17,14 @@ public class Mago extends Jugador{
 				this.getNombre(),
 				enemigo.getNombre());
 		if(mana>ap) {
-			enemigo.setFuerza(enemigo.getFuerza() - this.getFuerza());
+			enemigo.setModFuerza(-ap);
 			mana -= ap;
 		}
+	}
+	
+	@Override
+	public void finalizarTurno() {
+		super.finalizarTurno();
+		mana += 1;
 	}
 }

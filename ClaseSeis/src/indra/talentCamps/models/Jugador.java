@@ -6,12 +6,14 @@ public abstract class Jugador {
 	private int hp;
 	private int fuerza;
 	private int destreza;
+	private int modFuerza;
 	
 	public Jugador(String nombre) {
 		this.nombre = nombre;
 		hp = 50;
 		fuerza = 50;
 		destreza = 50;
+		modFuerza = 0;
 	}
 
 	public String getNombre() {
@@ -42,14 +44,20 @@ public abstract class Jugador {
 		this.destreza = destreza;
 	}
 
-	public void accion(Jugador enemigo) {
-		
+	protected void setModFuerza(int modFuerza) {
+		this.modFuerza = modFuerza;
 	}
+	
+	public void accion(Jugador enemigo) {}
 	
 	public boolean estaVivo() {
 		if (this.getHp()>0) 
 			return true;
 		return false;
+	}
+	
+	public void finalizarTurno() {
+		this.setModFuerza(0);
 	}
 	
 	@Override 

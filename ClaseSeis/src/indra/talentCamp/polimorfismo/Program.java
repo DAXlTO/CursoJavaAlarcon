@@ -15,7 +15,6 @@ public class Program {
 		Jugador batman = new Guerrero("Batman");
 		Jugador thanos = new Mago("Thanos");
 
-
 		List<Jugador> personajes = new ArrayList<Jugador>();
 		personajes.add(excalibur);
 		personajes.add(batman);
@@ -25,9 +24,8 @@ public class Program {
 		System.out.println("-------------------------------------------------------------");
 		System.out.println("Comienzo del turno");
 		personajes.forEach(System.out::println);
-		
 		batman.accion(excalibur);
-		
+		personajes.forEach(p -> p.finalizarTurno());
 		
 		//Fin del turno
 		System.out.println("-------------------------------------------------------------");
