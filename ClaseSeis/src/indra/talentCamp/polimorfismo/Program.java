@@ -31,9 +31,25 @@ public class Program {
 		System.out.println("-------------------------------------------------------------");
 		System.out.println("Fin del turno. Quedaron vivos:");
 		personajes.stream().filter(n -> n.estaVivo()).forEach(System.out::println);
+		List<Integer> numeros = new ArrayList<>();
+		numeros.add(2);
+		numeros.add(3);
+		//System.out.println(numeros.stream().filter(n-> n%2== 0)).sum();
+		//numeros.stream().mapToDouble(n-> n.getPrecio()).sum();
+		
+		//Ejercicio 1
+		 //estudiantes.stream().filter(e -> e.getCalificacion() > 90).collect(Collectors.col);
+		//estudiantes.stream().filter(e -> e.getCalificacion() > 90).forEach(System.out::println);
+		
+		//Ejercicio 2
+		numeros.stream().max((a,b)->(a-b)).orElse(0);
+		
+		//Ejercicio 3
+		numeros.stream().reduce( 0, (a,b) -> Math.max(a, b));
+		
+		//Ejercicio 4
+		System.out.println(numeros.stream().filter(n -> n%2 == 0).mapToInt(n->n).sum());
 
-		
-		
 	
 		
 	}
