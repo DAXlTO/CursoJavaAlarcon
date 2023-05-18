@@ -3,15 +3,14 @@ package indra.talentCamp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Banco {
+public abstract class CuentaBancaria {
 	
 	private double numeroCuenta;
 	private double saldo;
 	private List<Movimiento> movimientos;
 	private Cliente cliente;
 	
-	public Banco(double numeroCuenta, Cliente cliente) {
-		super();
+	public CuentaBancaria(double numeroCuenta, Cliente cliente) {
 		this.numeroCuenta = numeroCuenta;
 		this.saldo = 0;
 		this.movimientos = new ArrayList<Movimiento>();

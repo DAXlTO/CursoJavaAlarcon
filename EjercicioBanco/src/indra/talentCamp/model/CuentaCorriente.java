@@ -2,11 +2,10 @@ package indra.talentCamp.model;
 
 import java.util.List;
 
-public class CuentaCorriente extends Banco{
+public class CuentaCorriente extends CuentaBancaria{
 
 	public CuentaCorriente(double numeroCuenta, double saldo, List<Movimiento> movimientos, Cliente cliente) {
 		super(numeroCuenta, cliente);
-		// TODO Auto-generated constructor stub
 	}
 
 

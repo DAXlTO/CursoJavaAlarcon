@@ -2,11 +2,10 @@ package indra.talentCamp.model;
 
 import java.util.List;
 
-public class CajaAhorro extends Banco{
+public class CajaAhorro extends CuentaBancaria{
 
 	public CajaAhorro(double numeroCuenta, double saldo, List<Movimiento> movimientos, Cliente cliente) {
 		super(numeroCuenta, cliente);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
